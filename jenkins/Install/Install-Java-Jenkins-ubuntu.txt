@@ -13,6 +13,10 @@ Install Jenkins
         wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 	echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
 	sudo apt-get update
+	
+				## if you got an error like this {W: GPG error: http://pkg.jenkins-ci.org binary/ Release: The following signatures couldn't be verified because 				 the public key is not available: NO_PUBKEY 9B7D32F2D50582E6}
+				##Use this Command : sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <the key>
+				
 	sudo apt-get install jenkins
 
 
